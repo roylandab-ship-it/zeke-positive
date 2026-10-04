@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tap Into Something Positive | Zeke 2026</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:
+radial-gradient(circle at 20% 10%,#d71920 0 8%,transparent 9%),
+linear-gradient(145deg,#080808,#171717 58%,#050505);color:#fff;
+font-family:Arial,Helvetica,sans-serif;padding:22px}
+.card{width:min(94vw,520px);border:3px solid #d71920;border-radius:28px;padding:30px 24px;
+background:#0b0b0bee;box-shadow:0 18px 60px #000;text-align:center}
+.crown{font-size:54px;color:#d4af37}
+.kicker{font-weight:900;letter-spacing:2px;color:#d71920;font-size:14px}
+h1{font-size:36px;line-height:.95;margin:10px 0 5px;text-transform:uppercase}
+.sub{color:#ddd;margin:8px 0 25px}
+.message{min-height:190px;display:grid;place-items:center;padding:24px 18px;border-radius:20px;
+background:#fff;color:#111;font-size:29px;line-height:1.15;font-weight:900;border:5px solid #d4af37}
+button{margin-top:22px;border:0;border-radius:999px;background:#d71920;color:#fff;padding:16px 26px;
+font-size:18px;font-weight:900;cursor:pointer;box-shadow:0 6px 0 #8b0e13}
+button:active{transform:translateY(3px);box-shadow:0 3px 0 #8b0e13}
+.footer{margin-top:25px;font-weight:900}
+.footer span{color:#d71920}
+.small{font-size:12px;color:#aaa;margin-top:8px}
+</style>
+</head>
+<body>
+<main class="card">
+<div class="crown">♛</div>
+<div class="kicker">REMOVE THE FILTERS • 2026</div>
+<h1>Tap Into<br>Something Positive</h1>
+<p class="sub">Your message for today:</p>
+<div id="message" class="message"></div>
+<button onclick="newMessage()">TAP FOR ANOTHER ✨</button>
+<div class="footer">NO FILTER. JUST <span>ZEKE.</span></div>
+<div class="small">Ezekiel Brooks • Homecoming King 2026</div>
+</main>
+<script>
+const messages = ["You are more capable than you think.", "Your presence matters.", "Keep going. You are closer than you think.", "Choose confidence over comparison.", "You belong in every room you worked to enter.", "Give yourself credit for how far you've come.", "Your voice deserves to be heard.", "Progress counts, even when it feels small.", "Protect your peace.", "Today is another chance to begin again.", "You do not have to have everything figured out.", "Your effort today is building your tomorrow.", "Be proud of the person you're becoming.", "Trust yourself a little more today.", "One difficult day does not define your semester.", "Your goals are worth the work.", "Take up space. You belong here.", "Rest when you need to. Then keep moving.", "Your potential is bigger than your fear.", "Focus on your path, not someone else's timeline.", "Something good can start with one small step.", "You have made it through hard days before.", "Confidence grows every time you show up.", "Let go of what you cannot control.", "Your authenticity is your advantage.", "Be the energy you want around you.", "Your future deserves your focus.", "Give yourself permission to grow.", "You can change direction without giving up.", "Keep choosing what moves you forward.", "Your best does not have to look like anyone else's.", "You are allowed to celebrate small wins.", "Do something today your future self will thank you for.", "Comparison is a filter. Take it off.", "Fear is a filter. Take it off.", "Self-doubt is a filter. Take it off.", "Perfection is a filter. Take it off.", "Negativity is a filter. Take it off.", "Overthinking is a filter. Take it off.", "Keep the lesson. Release the stress.", "Keep the confidence. Release the doubt.", "Keep the peace. Release the pressure.", "Keep the purpose. Release the distractions.", "Keep the courage. Release the fear.", "Keep what's real: your character, your purpose, your potential.", "Your next chapter does not need yesterday's filter.", "Show up as yourself. That's enough.", "Bring good energy into the room today.", "Finish this semester stronger than you started it.", "Remove the filters. Keep what's real."];
+let last=-1;
+function newMessage(){
+ let i;
+ do { i=Math.floor(Math.random()*messages.length); } while(i===last && messages.length>1);
+ last=i;
+ document.getElementById('message').textContent=messages[i];
+}
+newMessage();
+</script>
+</body>
+</html>
